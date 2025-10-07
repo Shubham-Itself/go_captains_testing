@@ -3690,16 +3690,17 @@ Needs Section CSS
 
 .needs-area-content .needs-text {
   margin-top: 25px;
+ 
 }
 
 .needs-area-content .needs-text p {
   color: #464b54;
   margin: 0 0 0 0;
   position: relative;
-  padding-left: 45px;
+  padding-left: 0px;
 }
 
-.needs-area-content .needs-text p::before {
+/* .needs-area-content .needs-text p::before {
   position: absolute;
   content: "";
   height: 2px;
@@ -3707,7 +3708,7 @@ Needs Section CSS
   left: 0;
   top: 16px;
   background-color: #ff8b00;
-}
+} */
 
 .needs-area-content .needs-btn {
   margin-top: 30px;
@@ -10593,5 +10594,9 @@ Sidebar Menu Style
 
 .inner-update-section::after {
   display: none;
+}
+
+.grey-background{
+  background-color: rgb(248, 247, 248);
 }
 /*# sourceMappingURL=style.css.map */
