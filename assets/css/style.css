@@ -636,13 +636,16 @@ Navbar Area CSS
 .exto-nav .navbar .others-options .saas-nav-btn {
   background-color: #fd5a0e;
   color: #ffffff;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 4px;
   margin-left: 10px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   font-size: 16px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .exto-nav .navbar .others-options .saas-nav-btn i {
