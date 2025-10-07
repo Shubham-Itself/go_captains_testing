@@ -9580,10 +9580,11 @@ Checkout Area CSS
 Footer Section CSS
 =================================================*/
 .footer-section {
-  background-image: url(../../assets/img/footer-bg.jpg);
+  /* background-image: url(../../assets/img/footer-bg.jpg);
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background-image: linear-gradient(to top, #ffffff, #e5f5df);
   position: relative;
   z-index: 1;
   padding-top: 100px;
@@ -9596,7 +9597,7 @@ Footer Section CSS
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   opacity: 0.9;
   right: 0;
   z-index: -1;
