@@ -2502,7 +2502,8 @@ Pricing Section CSS
 }
 
 .single-pricing-box .pricing-features {
-  padding-left: 30px;
+  margin-top: 20px;
+  padding-left: 19px;
   margin-bottom: 0;
   text-align: left;
 }
@@ -2512,7 +2513,7 @@ Pricing Section CSS
   font-size: 16px;
   color: #827f8d;
   font-weight: 400;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 .single-pricing-box .pricing-features li:last-child {
@@ -2553,7 +2554,7 @@ Pricing Section CSS
 .single-pricing-box.table-price {
   margin-left: 0;
   position: relative;
-  left: -40px;
+  left: -24px;
   top: 30px;
 }
 
@@ -4465,7 +4466,7 @@ Circulate Section CSS
 
 .about-content-area span {
   font-size: 16px;
-  color: #002c8c;
+  color: #ff8b00;
   font-weight: 400;
 }
 
@@ -10602,5 +10603,32 @@ Sidebar Menu Style
 
 .grey-background{
   background-color: rgb(248, 247, 248);
+}
+.green-gradient{
+  background-image: linear-gradient(to top, #ffffff, #e5f5df);
+}
+.mw-1010px{
+  max-width: 1010px !important;
+}
+.bgsectiondotted{
+  background-image: url(../../assets/img/footer-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    padding-top: 100px;
+    background-position: center center;
+}
+.bgsectiondotted::before{
+  content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.9;
+    right: 0px;
+    z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */
