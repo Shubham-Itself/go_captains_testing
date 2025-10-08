@@ -7571,7 +7571,7 @@ Blog Details Area CSS
 blockquote, .blockquote {
   overflow: hidden;
   background-color: #fafafa;
-  padding: 50px !important;
+  padding: 25px !important;
   position: relative;
   text-align: center;
   z-index: 1;
@@ -7585,7 +7585,7 @@ blockquote p, .blockquote p {
   margin-bottom: 0;
   font-style: italic;
   font-weight: 500;
-  font-size: 24px !important;
+  font-size: 18px !important;
 }
 
 blockquote cite, .blockquote cite {
@@ -10642,5 +10642,19 @@ Sidebar Menu Style
     transition: 0.5s;
     border-radius: 5px;
     cursor: pointer;
+}
+.margin-b-100{
+  margin-bottom: 100px;
+  padding-bottom: 100px !important;
+}
+
+.scheduleText{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.innerscheduletext{
+  color: #fd5a0e;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
