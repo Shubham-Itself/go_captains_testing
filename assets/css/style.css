@@ -319,6 +319,9 @@ Navbar Area CSS
   display: none;
   max-width: 120px;
 }
+.exto-nav .navbar .navbar-brand{
+  width: 15%;
+}
 
 .exto-nav .navbar ul {
   padding-left: 0;
@@ -10657,5 +10660,10 @@ Sidebar Menu Style
 .innerscheduletext{
   color: #fd5a0e;
   cursor: pointer;
+}
+.footer-logo{
+  width: 50%;
+  margin-top: -20px;
+  margin-left: -8px;
 }
 /*# sourceMappingURL=style.css.map */
