@@ -52,7 +52,7 @@
         <!-- End Preloader Area -->
 
         <!-- Start Navbar Area Two -->
-        <div class="navbar-area">
+        <div class="navbar-area bg-white">
             <div class="exto-responsive-nav">
                 <div class="container">
                     <div class="exto-responsive-menu">
@@ -82,13 +82,13 @@
                                     </a>
                                      <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="index.html" class="nav-link active">Our Story</a>
+                                            <a href="about.html#aboutUsSection" class="nav-link active">Our Story</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="index-2.html" class="nav-link">Vision & Mission</a>
+                                            <a href="about.html#missionvisionsection" class="nav-link">Vision & Mission</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="index-3.html" class="nav-link">Leadership & Mentors</a>
+                                            <a href="about.html" class="nav-link">Leadership & Mentors</a>
                                         </li>
                                        
                                     </ul>
@@ -130,19 +130,19 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="about.html" class="nav-link">How We Work</a>
+                                            <a href="our-approach.html#howworksection" class="nav-link">How We Work</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="team.html" class="nav-link">Tools & Technology</a>
+                                            <a href="our-approach.html#toolTechnologySection" class="nav-link">Tools & Technology</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="faq.html" class="nav-link">Team Structure & Expertise</a>
+                                            <a href="our-approach.html#teamstructuresection" class="nav-link">Team Structure & Expertise</a>
                                         </li>
                                        
                                     </ul>
                                 </li>
                                
-                                <li class="nav-item">
+                                <li class="nav-item d-none">
                                     <a href="#" class="nav-link">
                                         Clients & Partners
                                         <!-- <i class="fa fa-angle-down"></i> -->
@@ -246,52 +246,40 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="contact-form">
-							<form id="contactForm">
-								<div class="row">
-									<div class="col-lg-6">
-										<div class="form-group">
-                                            <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Name">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
+							<form id="contactFormmms" action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="d87ed12b-1345-436e-8cce-82c6cdd75bc5">
+                              
+                                <div class="row">
+                                  <div class="col-lg-6">
+                                    <div class="form-group">
+                                      <input type="text" name="name" id="name" class="form-control" required placeholder="Name">
                                     </div>
-                                    <div class="col-lg-6">
-										<div class="form-group">
-                                            <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Phone">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
+                                  </div>
+                              
+                                  <div class="col-lg-6">
+                                    <div class="form-group">
+                                      <input type="text" name="phone_number" id="phone_number" class="form-control" required placeholder="Phone">
                                     </div>
-                                    
-									<div class="col-lg-12">
-										<div class="form-group">
-                                            <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Email">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
+                                  </div>
+                              
+                                  <div class="col-lg-12">
+                                    <div class="form-group">
+                                      <input type="email" name="email" id="email" class="form-control" required placeholder="Email">
                                     </div>
-                                    
-									
-                                    
-									<!-- <div class="col-lg-6">
-										<div class="form-group">
-                                            <input type="text" name="subject" id="subject" required data-error="Please enter your subject" class="form-control" placeholder="Subject">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div> -->
-                                    
-									<div class="col-lg-12">
-										<div class="form-group">
-                                            <textarea name="message" class="form-control" id="message" cols="30" rows="6" required data-error="Write your message" placeholder="Your Message"></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
+                                  </div>
+                              
+                                  <div class="col-lg-12">
+                                    <div class="form-group">
+                                      <textarea name="message" id="message" class="form-control" rows="6" required placeholder="Your Message"></textarea>
                                     </div>
-                                    
-									<div class="col-lg-12">
-                                        <button type="submit" class="default-btn">Send Message</button>
-                                        
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
-									</div>
-								</div>
-							</form>
+                                  </div>
+                              
+                                  <div class="col-lg-12">
+                                    <button type="submit" id="submitBtn" class="default-btn" disabled>Send Message</button>
+                                    <div id="formStatus" class="h3 text-center mt-3"></div>
+                                  </div>
+                                </div>
+                              </form>
 						</div>
 					</div>
 				</div>
@@ -464,5 +452,51 @@
         <script src="assets/js/progressbar.min.js"></script>
         <!-- Main JS -->
         <script src="assets/js/main.js"></script>
+        <script>
+            const form = document.getElementById('contactFormmms');
+            const submitBtn = document.getElementById('submitBtn');
+            const formStatus = document.getElementById('formStatus');
+            const inputs = form.querySelectorAll('input[required], textarea[required]');
+          
+            // ✅ Enable button only when all required fields are filled
+            function checkFormValidity() {
+              const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+              submitBtn.disabled = !allFilled;
+            }
+          
+            inputs.forEach(input => input.addEventListener('input', checkFormValidity));
+          
+            // ✅ Handle form submission manually to show message below button
+            form.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              submitBtn.disabled = true;
+              formStatus.textContent = 'Sending...';
+              formStatus.style.color = '#333';
+          
+              const formData = new FormData(form);
+          
+              try {
+                const response = await fetch(form.action, {
+                  method: form.method,
+                  body: formData
+                });
+          
+                if (response.ok) {
+                  form.reset();
+                  formStatus.textContent = '✅ Message sent successfully!';
+                  formStatus.style.color = 'green';
+                } else {
+                  formStatus.textContent = '❌ Something went wrong. Please try again.';
+                  formStatus.style.color = 'red';
+                }
+              } catch (error) {
+                formStatus.textContent = '❌ Network error. Please try again.';
+                formStatus.style.color = 'red';
+              }
+          
+              // Re-check if form can be re-enabled
+              checkFormValidity();
+            });
+          </script>
     </body>
 </html>
